@@ -57,16 +57,27 @@ function assert(expression, failureMessage) {
  it failed.
 */
 
-//your code goes here
+var failureMessage = "no, the lion is smaller";
+var lion = 5;
+var elephant = 15;
+
+function assert(expression) {
+  if (!expression) {
+    console.log('assertion failure: ', failureMessage);
+  } else {
+    console.log('word!');
+  }
+}
+
+assert( (lion > elephant), failureMessage);
+assert( lion < elephant );
+
+
 
 /* ----------------- Meerkats -------------------------------------------------
  Meerkats make a sort of chirping noise (according to my 30 seconds of
  research).  We're going to translate two sentences into meerkat speech.
 */
-
-var sentence1 = 'More food please.';
-var sentence2 = 'Come over here so you can scratch my belly.';
-
 /*
  TODO: 20 points
  Your goal is to replace the words in the above sentences with 'chirp' The
@@ -75,7 +86,30 @@ var sentence2 = 'Come over here so you can scratch my belly.';
  HINT: the 'split' method on String will be useful.
 */
 
-// your code goes here
+
+var sentence1 = 'More food please.';
+var sentence2 = 'Come over here so you can scratch my belly.';
+var space =' ';
+
+function splitString(myString, separator) {
+  var arrayOfStrings = myString.split(separator);
+
+var chirpArr = [];
+var i = 0;
+do {
+i++;
+  chirpArr.push(' chirp');
+} while (i < arrayOfStrings.length);
+
+
+chirpArr.push('.');
+console.log(chirpArr.join(''));
+
+}
+
+splitString(sentence1, space);
+splitString(sentence2, space);
+
 
 assert(sentence1 === 'chirp chirp chirp.', 'sentence 1 should have 3 chirps');
 assert(sentence2 === 'chirp chirp chirp chirp chirp chirp chirp chirp chirp.',
@@ -88,13 +122,18 @@ assert(sentence2 === 'chirp chirp chirp chirp chirp chirp chirp chirp chirp.',
  Hint: read the Math.random description on MDN.
 */
 
-var favoriteAnimals = ['elephant', 'penguin', 'eagle', 'camel'];
-var nextAnimal;
-
 // TODO: 10 points
 // Assign one of your favorite animals to nextAnimal using Math.random() to pick
 
-// your code goes here
+var favoriteAnimals = ['elephant', 'penguin', 'eagle', 'camel'];
+var nextAnimal;
+pickAnimal();
+
+function pickAnimal() {
+nextAnimal = (favoriteAnimals[Math.floor(Math.random() * favoriteAnimals.length)]);
+}
+//nextAnimal; shows a random next animal
+
 
 assert(nextAnimal, 'assign something to nextAnimal');
 
