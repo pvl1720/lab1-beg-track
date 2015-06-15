@@ -56,7 +56,6 @@ function assert(expression, failureMessage) {
  zoo-themed.  Make one pass and one fail. In the failure message, describe why
  it failed.
 */
-
 var failureMessage = "no, the lion is smaller";
 var lion = 5;
 var elephant = 15;
@@ -65,12 +64,12 @@ function assert(expression) {
   if (!expression) {
     console.log('assertion failure: ', failureMessage);
   } else {
-    console.log('word!');
+    console.log('word!!!');
   }
 }
 
-assert( (lion > elephant), failureMessage);
-assert( lion < elephant );
+assert((lion > elephant), failureMessage);
+assert(lion < elephant);
 
 
 
@@ -86,30 +85,40 @@ assert( lion < elephant );
  HINT: the 'split' method on String will be useful.
 */
 
-
 var sentence1 = 'More food please.';
 var sentence2 = 'Come over here so you can scratch my belly.';
-var space =' ';
+var space = ' ';
 
-function splitString(myString, separator) {
+function splitString1(myString, separator) {
   var arrayOfStrings = myString.split(separator);
+  sentence1 = [];
 
-var chirpArr = [];
-var i = 0;
-do {
-i++;
-  chirpArr.push(' chirp');
-} while (i < arrayOfStrings.length);
+  var i = 0;
+  do {
+    i++;
+    sentence1.push('chirp');
+  } while (i < arrayOfStrings.length);
 
-
-chirpArr.push('.');
-console.log(chirpArr.join(''));
-
+  sentence1 = sentence1.join(' ');
+  sentence1 += ".";
+  //console.log(sentence1);
 }
 
-splitString(sentence1, space);
-splitString(sentence2, space);
+function splitString2(myString, separator) {
+  var arrayOfStrings = myString.split(separator);
+  sentence2 = [];
 
+  for (var i = 0; i < arrayOfStrings.length; i++) {
+    sentence2.push('chirp');
+  }
+
+  sentence2 = sentence2.join(' ');
+  sentence2 += ".";
+  //console.log(sentence2);
+}
+
+splitString1(sentence1, space);
+splitString2(sentence2, space);
 
 assert(sentence1 === 'chirp chirp chirp.', 'sentence 1 should have 3 chirps');
 assert(sentence2 === 'chirp chirp chirp chirp chirp chirp chirp chirp chirp.',
@@ -130,10 +139,9 @@ var nextAnimal;
 pickAnimal();
 
 function pickAnimal() {
-nextAnimal = (favoriteAnimals[Math.floor(Math.random() * favoriteAnimals.length)]);
+  nextAnimal = (favoriteAnimals[Math.floor(Math.random() * favoriteAnimals.length)]);
 }
-//nextAnimal; shows a random next animal
-
+//console.log(nextAnimal);
 
 assert(nextAnimal, 'assign something to nextAnimal');
 
@@ -162,7 +170,7 @@ var animalExhibitStats = {
  notation with dot notation wherever possible.
 */
 
-assert(animalExhibitStats['numberOpen'] === 13, 'there should be 13 open exhibits');
+assert(animalExhibitStats.numberOpen === 13, 'there should be 13 open exhibits');
 assert(animalExhibitStats['number closed'] === 2, 'there should be 2 closed exhibits');
 assert(animalExhibitStats['petting-zoo-open'], 'hey! =( i was promised meerkats!');
 assert(animalExhibitStats['2ndMostPopular'] === 'Dumbo the Depressed Donkey',
@@ -172,7 +180,8 @@ assert(animalExhibitStats['2ndMostPopular'] === 'Dumbo the Depressed Donkey',
 // Write an assert about the 'mostPopular' property of animalExibitStats.
 // Use the above examples to guide you.
 
-// your assert goes here
+assert(animalExhibitStats['mostPopular'] === 'Lucky the Emperor Penguin');
+
 
 /* ----------------- Code Style ----------------------------------------
  TODO: 10 points
