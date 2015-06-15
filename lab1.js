@@ -148,11 +148,11 @@ assert(nextAnimal, 'assign something to nextAnimal');
 // don't require quotes for the code to work. Remove the unnecessary quotes.
 
 var animalExhibitStats = {
-  'numberOpen': 13,
+  numberOpen: 13,
   'number closed': 2,
   'petting-zoo-open': true,
-  'mostPopular': 'Lucky the Emperor Penguin',
-  '2ndMostPopular': 'Dumbo the Depressed Donkey'
+  mostPopular: 'Lucky the Emperor Penguin',
+  2ndMostPopular: 'Dumbo the Depressed Donkey'
 };
 
 /*
