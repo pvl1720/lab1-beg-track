@@ -173,14 +173,14 @@ var animalExhibitStats = {
 assert(animalExhibitStats.numberOpen === 13, 'there should be 13 open exhibits');
 assert(animalExhibitStats['number closed'] === 2, 'there should be 2 closed exhibits');
 assert(animalExhibitStats['petting-zoo-open'], 'hey! =( i was promised meerkats!');
-assert(animalExhibitStats['2ndMostPopular'] === 'Dumbo the Depressed Donkey',
+assert(animalExhibitStats['2ndMostPopular'] === 'Dumbo the Depressed Donkey');
   'Dumbo is supposed to be second place, as usual');
 
 // TODO: 4 points
 // Write an assert about the 'mostPopular' property of animalExibitStats.
 // Use the above examples to guide you.
 
-assert(animalExhibitStats['mostPopular'] === 'Lucky the Emperor Penguin');
+assert(animalExhibitStats.mostPopular === 'Lucky the Emperor Penguin');
 
 
 /* ----------------- Code Style ----------------------------------------
