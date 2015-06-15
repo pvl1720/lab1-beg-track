@@ -56,7 +56,7 @@ function assert(expression, failureMessage) {
  zoo-themed.  Make one pass and one fail. In the failure message, describe why
  it failed.
 */
-var failureMessage = "no, the lion is smaller";
+var failureMessage = 'no, you failed';
 var lion = 5;
 var elephant = 15;
 
@@ -71,8 +71,6 @@ function assert(expression) {
 assert((lion > elephant), failureMessage);
 assert(lion < elephant);
 
-
-
 /* ----------------- Meerkats -------------------------------------------------
  Meerkats make a sort of chirping noise (according to my 30 seconds of
  research).  We're going to translate two sentences into meerkat speech.
@@ -84,7 +82,6 @@ assert(lion < elephant);
  Use **two** different kinds of loops to implement this. (10 points each.)
  HINT: the 'split' method on String will be useful.
 */
-
 var sentence1 = 'More food please.';
 var sentence2 = 'Come over here so you can scratch my belly.';
 var space = ' ';
@@ -100,7 +97,7 @@ function splitString1(myString, separator) {
   } while (i < arrayOfStrings.length);
 
   sentence1 = sentence1.join(' ');
-  sentence1 += ".";
+  sentence1 += '.';
   //console.log(sentence1);
 }
 
@@ -113,7 +110,7 @@ function splitString2(myString, separator) {
   }
 
   sentence2 = sentence2.join(' ');
-  sentence2 += ".";
+  sentence2 += '.';
   //console.log(sentence2);
 }
 
@@ -142,7 +139,6 @@ function pickAnimal() {
   nextAnimal = (favoriteAnimals[Math.floor(Math.random() * favoriteAnimals.length)]);
 }
 //console.log(nextAnimal);
-
 assert(nextAnimal, 'assign something to nextAnimal');
 
 /* ----------------- Survey Says... ---------------------------------------
@@ -181,7 +177,6 @@ assert(animalExhibitStats['2ndMostPopular'] === 'Dumbo the Depressed Donkey',
 // Use the above examples to guide you.
 
 assert(animalExhibitStats.mostPopular === 'Lucky the Emperor Penguin');
-
 
 /* ----------------- Code Style ----------------------------------------
  TODO: 10 points
